@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class Learner
+{
+public:
+    void study()
+    {
+        cout << "Student attends classes and studies." << endl;
+    }
+};
+class Participant
+{
+public:
+    void joinEvent()
+    {
+        cout << "Student joins university clubs and events." << endl;
+    }
+};
+class Student : public Learner, public Participant
+{
+};
+int main()
+{
+    Student s;
+    s.study();
+    s.joinEvent();
+    return 0;
+}
